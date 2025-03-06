@@ -99,7 +99,7 @@ func main() {
 			}
 			// fmt.Printf("https://testdata.s3.bitiful.net/\n", SetUrl(*object.Key))
 			fmt.Printf("%s\n", *object.Key)
-			filesLink = append(filesLink, "https://testdata.s3.bitiful.net/"+SetUrl(*object.Key))
+			filesLink = append(filesLink, fmt.Sprintf("https://%s.s3.bitiful.net/", bucket)+SetUrl(*object.Key))
 			filesName = append(filesName, *object.Key)
 		}
 		fmt.Println("\n 输入 -1  导出当文件夹下文件的 Excel 表格:")
